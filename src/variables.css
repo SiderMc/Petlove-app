@@ -1,0 +1,16 @@
+:root {
+    --color-accent: #F6B83D; 
+    --color-accent-hover: #F9B020; 
+
+    --color-background: #FFF4DF; 
+    --color-background-hover: #FBE7C1; 
+
+    --color-text-primary: #262626; 
+    --color-text-secondary: #FFFFFF; 
+    --color-text-third:rgba(38, 38, 38, 0.5)  ;
+
+    --color-common:rgba(38, 38, 38, 0.5);
+
+    --font-family:"Manrope", sans-serif;
+  }
+  
