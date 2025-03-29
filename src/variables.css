@@ -1,16 +1,35 @@
 :root {
-    --color-accent: #F6B83D; 
-    --color-accent-hover: #F9B020; 
+  --color-accent: #F6B83D;
+  --color-accent-hover: #F9B020;
+  --color-primary: #262626;
+  --color-secondary: #ffffff;
 
-    --color-background: #FFF4DF; 
-    --color-background-hover: #FBE7C1; 
+  --color-background: #fff4df;
+  --color-background-hover: #fbe7c1;
 
-    --color-text-primary: #262626; 
-    --color-text-secondary: #FFFFFF; 
-    --color-text-third:rgba(38, 38, 38, 0.5)  ;
+  --color-text-primary: #262626;
+  --color-text-secondary: #ffffff;
+  --color-text-third: rgba(38, 38, 38, 0.5);
+  --color-text-accent: #f6b83d;
+  --color-text-muted: rgba(255, 255, 255, 0.4);
 
-    --color-common:rgba(38, 38, 38, 0.5);
+  --color-common: rgba(38, 38, 38, 0.5);
+  --color-border: rgba(0, 0, 0, 0.15);
+  --color-border-second: rgba(255, 255, 255, 0.4);
 
-    --font-family:"Manrope", sans-serif;
-  }
-  
+  --font-family: "Manrope", sans-serif;
+
+  --transition: 300ms linear;
+
+  --header-text-primary: #262626;
+  --header-text-secondary: #ffffff;
+  --header-border: rgba(38, 38, 38, 0.15);
+  --header-hover: #F9B020;
+  --header-hover-second: #ffffff;
+}
+
+[data-header="home"] {
+  --header-text-primary: var(--color-text-secondary);
+  --header-border: var(--color-border-second);
+  --header-hover-second: var(--color-accent-hover);
+}

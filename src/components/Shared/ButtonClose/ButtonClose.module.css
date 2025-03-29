@@ -1,0 +1,33 @@
+.primary,.secondary{
+    width: 32px;
+    height: 32px;
+    stroke-width: 2px;
+    padding: 5px;
+    transition: stroke var(--transition);
+}
+
+.primary {
+    stroke: var(--color-primary);
+}
+
+.secondary {
+    stroke: var(--color-border-second);
+}
+
+.button__close {
+    width: 32px;
+    height: 32px;
+    border: 1px solid transparent;
+    background: inherit;
+    transition: all var(--transition);
+    border-radius: 50%;
+}
+
+.button__close:hover .primary{
+    stroke: var(--color-accent-hover);
+    transition: all 300ms linear;
+}
+.button__close:hover .secondary{
+    stroke: var(--color-secondary);
+
+}

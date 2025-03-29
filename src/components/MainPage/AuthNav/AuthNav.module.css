@@ -1,0 +1,40 @@
+.auth__list,
+.auth__list_item {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth__list {
+    gap: 8px;
+}
+
+.auth__list_item {
+    width: 100%;
+}
+
+@media screen and (max-width:767px) {
+    .auth__list {
+        display: none;
+        gap: 8px;
+        width: 100%;
+    }
+
+    [data-menu="open"] .auth__list {
+        display: flex;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .auth__list {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .auth__list_item {
+        width: max-content;
+    }
+
+    [data-menu="open"] .auth__list {
+        padding-inline: 18px;
+    }
+}
