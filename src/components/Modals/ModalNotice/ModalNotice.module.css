@@ -1,0 +1,145 @@
+.modal__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, min-content);
+    justify-items: center;
+    padding-inline: 24px;
+    padding-block: 0 12px;
+    margin-top: -10px;
+}
+
+.modal__image__content {
+    position: relative;
+    max-width: 120px;
+    max-height: 120px;
+}
+
+.modal__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.modal__category {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--color-background);
+    color: var(--color-text-accent);
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+}
+
+.modal__title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    color: var(--color-text-primary);
+    margin-block: 20px 10px;
+}
+
+.modal__rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.modal__rating_text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.43;
+    color: var(--color-text-primary);
+}
+
+.modal__list {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    margin-block: 24px 16px;
+}
+
+.modal__list_item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-direction: column;
+}
+
+.modal__sup_text {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    color: var(--color-text-third);
+}
+
+.modal__sub_text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: -0.02em;
+    color: var(--color-text-primary);
+
+}
+
+.modal__comment {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    color: var(--color-text-primary);
+    text-wrap: pretty;
+}
+
+.modal__price {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    color: var(--color-text-primary);
+    margin-block: 32px 20px;
+}
+
+.modal__actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+@media screen and (min-width:768px) {
+    .modal__content {
+        padding-inline: 50px;
+        padding-block: 0 12px;
+    }
+
+    .modal__title,.modal__list,.modal__comment{
+        padding-inline: 37px;
+    }
+    .modal__image__content {
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    .modal__category {
+        font-size: 14px;
+    }
+
+    .modal__title {
+        font-size: 18px;
+        line-height: 1.33;
+        margin-block: 16px 10px;
+    }
+
+    .modal__list {
+        margin-block: 20px 16px;
+    }
+
+    .modal__price {
+        font-size: 18px;
+        line-height: 1.33;
+    }
+}

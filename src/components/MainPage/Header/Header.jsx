@@ -5,18 +5,14 @@ import Burger from '../../Shared/Burger/Burger';
 import UserNav from '../UserNav/UserNav';
 import AuthNav from '../AuthNav/AuthNav';
 import SvgIcons from '../../Shared/SvgIcons/SvgIcons';
-import { useState } from 'react';
 import MobMenu from '../../Shared/MobMenu/MobMenu';
 import usePageCheck from '../../../hooks/usePageCheck';
 import Container from '../../Shared/Container/Container';
+import useModal from '../../../hooks/useModal';
 
 export default function Header() {
-  const [isOpenMenu, setOpenMenu] = useState(false);
+  const { isOpen, modalRef, handleCloseModal, handleOpenModal } = useModal();
   const { selector, page } = usePageCheck('/', 'home');
-
-  const handleToggleMenu = () => {
-    setOpenMenu(prev => !prev);
-  };
   return (
     <>
       <Container>
@@ -29,10 +25,10 @@ export default function Header() {
           <Navigation />
           <AuthNav />
           {/* <UserNav isHome={page} /> */}
-          <Burger openMenu={handleToggleMenu} />
+          <Burger openMenu={handleOpenModal} />
         </header>
       </Container>
-      <MobMenu isOpen={isOpenMenu} closeMenu={handleToggleMenu} />
+      <MobMenu isOpen={isOpen} closeMenu={handleCloseModal} modalRef={modalRef}/>
     </>
   );
 }

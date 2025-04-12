@@ -85,6 +85,43 @@ export default function SvgIcons({ name, className }) {
         />
       </svg>
     ),
+    star: (
+      <svg
+        className={className}
+        width="16"
+        height="16"
+        viewBox="0 0 17 16"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_55807_3850)">
+          <path
+            d="M6.70021 4.69703L8.5 1.28579L10.2998 4.69703C10.459 4.9987 10.7491 5.20947 11.0851 5.26762L14.8856 5.92519L12.1975 8.69103C11.9598 8.93563 11.8489 9.27666 11.8975 9.61427L12.4465 13.4319L8.98537 11.7301C8.67929 11.5795 8.32071 11.5796 8.01463 11.7301L4.55348 13.4319L5.1025 9.61427C5.15105 9.27666 5.04024 8.93563 4.80252 8.69103L2.1144 5.92519L5.91486 5.26762C6.25095 5.20947 6.54104 4.9987 6.70021 4.69703ZM15.0177 5.78928L15.0175 5.78947L15.0177 5.78928ZM4.3834 13.5155C4.38344 13.5155 4.38349 13.5155 4.38353 13.5155L4.3834 13.5155Z"
+            fill="#FFC531"
+            stroke="#FFC531"
+            stroke-width="1.2"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_55807_3850">
+            <rect
+              width="16"
+              height="16"
+              fill="white"
+              transform="translate(0.5)"
+            />
+          </clipPath>
+        </defs>
+      </svg>
+    ),
+       
+        upload:<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"   className={className}
+     >
+    <path d="M12 12L9 9L6 12"  strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"  className={className}/>
+    <path d="M9 9V15.75" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"  className={className}/>
+    <path d="M15.2926 13.7925C16.0241 13.3937 16.602 12.7626 16.935 11.999C17.268 11.2353 17.3372 10.3824 17.1317 9.575C16.9262 8.7676 16.4577 8.05162 15.8001 7.54007C15.1425 7.02852 14.3332 6.75054 13.5001 6.74999H12.5551C12.3281 5.87192 11.905 5.05674 11.3175 4.36573C10.7301 3.67473 9.99372 3.12588 9.16366 2.76044C8.3336 2.39501 7.4315 2.22251 6.52518 2.2559C5.61885 2.28929 4.73189 2.52771 3.93097 2.95324C3.13006 3.37876 2.43602 3.98031 1.90106 4.71267C1.36609 5.44503 1.00411 6.28914 0.842327 7.18153C0.680545 8.07393 0.723171 8.99138 0.967002 9.86493C1.21083 10.7385 1.64952 11.5454 2.25009 12.225"  strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"  className={className}/>
+    <path d="M12 12L9 9L6 12"  strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"  className={className}/>
+    </svg>
+    
   };
   return icons[name] || null;
 }

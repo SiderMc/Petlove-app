@@ -9,17 +9,17 @@
 
   --color-text-primary: #262626;
   --color-text-secondary: #ffffff;
-  --color-text-third: rgba(38, 38, 38, 0.5);
+  --color-text-third: rgba(38, 38, 38, 0.4);
   --color-text-accent: #f6b83d;
   --color-text-muted: rgba(255, 255, 255, 0.4);
 
-  --color-common: rgba(38, 38, 38, 0.5);
+  --color-common: rgba(38, 38, 38, 0.05);
   --color-border: rgba(0, 0, 0, 0.15);
   --color-border-second: rgba(255, 255, 255, 0.4);
 
   --font-family: "Manrope", sans-serif;
 
-  --transition: 300ms linear;
+  --transition: 300ms ease;
 
   --header-text-primary: #262626;
   --header-text-secondary: #ffffff;

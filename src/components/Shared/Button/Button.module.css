@@ -1,6 +1,12 @@
 .btn__secondary,
-.btn__primary {
+.btn__primary,
+.btn__simple,
+.btn__transparent,.btn__disable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 15px 35px;
+    height: 100%;
     text-wrap: nowrap;
     border-radius: 30px;
     text-align: center;
@@ -10,7 +16,13 @@
     font-family: var(--font-family);
     transition: border var(--transition), background var(--transition), color var(--transition);
     letter-spacing: -0.03em;
-    text-transform: uppercase
+}
+
+[data-modal="open"] .btn__secondary,
+[data-modal="open"] .btn__primary,
+[data-modal="open"] .btn__simple,
+[data-modal="open"] .btn__transparent ,[data-modal="open"] .btn__disable {
+    width: 100%;
 }
 
 .btn__secondary {
@@ -39,15 +51,37 @@
 
 }
 
+.btn__simple {
+    border: 1px solid transparent;
+    background: var(--color-common);
+    color: var(--color-text-primary);
+    transition: border var(--transition), background var(--transition), color var(--transition);
+}
+.btn__disable{
+    background: var( --color-accent);
+    border: transparent;
+    color: var(--color-text-secondary);
+    opacity: 0.7;
+}
+
+.btn__simple:hover {
+    border: 1px solid var(--color-background-hover);
+    background: var(--color-background-hover);
+    color: var(--color-accent-hover);
+    transition: border var(--transition), background var(--transition), color var(--transition);
+}
+
 @media screen and (min-width:768px) {
 
     .btn__secondary,
-    .btn__primary {
+    .btn__primary,
+    .btn__simple,
+    .btn__transparent,.btn__disable {
         font-size: 16px;
         line-height: 1.25;
-
     }
 }
+
 .btn__primary:hover {
     border: 1px solid transparent;
     background: var(--color-accent-hover);

@@ -1,17 +1,23 @@
-.auth__list,
-.auth__list_item {
+.auth__list {
     display: flex;
+    align-items: center;
     flex-direction: column;
 }
-
+.auth__list_item{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
 .auth__list {
+    height: 100%;
     gap: 8px;
 }
 
-.auth__list_item {
-    width: 100%;
+[data-modal="open"]  .auth__list{
+    display: flex;
+    flex-direction: row;
 }
-
 @media screen and (max-width:767px) {
     .auth__list {
         display: none;

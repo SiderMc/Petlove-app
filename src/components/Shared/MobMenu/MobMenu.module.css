@@ -34,6 +34,9 @@
         justify-items: center;
         align-items: flex-end;
     }
+    .mobile__menu_home .mobile__content{
+        padding-inline: 20px;
+    }
     .btn__close_menu{
     justify-self: flex-end;
     align-self: flex-start;
@@ -53,6 +56,9 @@
 @media screen and (min-width:768px) and (max-width:1279px){
     .mobile__content{
         padding-block:39px 40px ;
+    }
+    .mobile__menu_home .mobile__content{
+        padding-inline: 32px;
     }
 }
 @media screen and (min-width:1280px){

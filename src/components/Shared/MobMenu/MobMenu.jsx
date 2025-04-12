@@ -6,18 +6,18 @@ import ButtonClose from '../ButtonClose/ButtonClose';
 import Container from '../Container/Container';
 import css from './MobMenu.module.css';
 
-export default function MobMenu({ isOpen, closeMenu }) {
+export default function MobMenu({ isOpen, modalRef,closeMenu }) {
   const { page } = usePageCheck('/');
 
   return (
     <section
       className={page ? css.mobile__menu_home : css.mobile__menu}
-      data-menu={isOpen ? 'open' : ''}>
+      data-menu={isOpen ? 'open' : ''} ref={modalRef}>
       <Container>
         <div className={css.mobile__content}>
           <ButtonClose
             primary={page}
-            close={closeMenu}
+            closeHandler={closeMenu}
             className={css.btn__close_menu}
           />
           <Navigation className={css.active__nav_link} />

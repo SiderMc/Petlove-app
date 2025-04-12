@@ -1,0 +1,46 @@
+.upload__label {
+    width: 100%;
+    max-height: 42px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 30px;
+    background: var(--color-background);
+    padding: 13px 12px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: -0.02em;
+    color: var(--color-text-primary);
+    cursor: pointer;
+    transition: background var(--transition);
+    white-space: nowrap;
+}
+.upload__image{
+    display: none;
+}
+
+.icon {
+    width: 18px;
+    height: 18px;
+    stroke: var(--color-accent);
+    background: inherit;
+    transition: stroke var(--transition);
+}
+
+.upload__label:hover {
+    background: var(--color-background-hover);
+    transition: background var(--transition);
+}
+
+.upload__label:hover .icon {
+    stroke: var(--color-accent-hover);
+    transition: stroke var(--transition);
+}
+
+@media screen and (min-width:768px) {
+    .upload__label {
+        font-size: 14px;
+        line-height: 129;
+    }
+}
