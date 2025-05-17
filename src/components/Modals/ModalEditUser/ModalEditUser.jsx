@@ -56,10 +56,11 @@ export default function ModalEditUser() {
   const getInputType = fieldName => {
     const value = watch(fieldName);
     const hasError = errors?.[fieldName];
-
-    if (hasError) return { noValid: true };
-    if (value?.trim()?.length > 0) return { primary: true };
-    return { secondary: true };
+    return {
+      noValid:hasError,
+      primary:value?.trim()?.length > 0,
+      secondary:!hasError && !value?.trim()?.length > 0
+    }
   };
   const onSubmit = data => {
     console.log(data);
@@ -122,9 +123,8 @@ export default function ModalEditUser() {
         <Button
           type="submit"
           primary={isValid}
-          disable={!isValid}
-          className={css.modal__btn}
-          disabled={!isValid}>
+          disabled={!isValid}
+            className={css.modal__btn}>
           Go to profile
         </Button>
       </form>

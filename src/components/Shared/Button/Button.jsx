@@ -8,7 +8,7 @@ export default function Button({
   secondary,
   transparent,
   simple,
-  disable,
+  disabled,
   className = '',
   children,
   ...rest
@@ -17,22 +17,22 @@ export default function Button({
   if (primary) {
     btnClass = `${css.btn__primary} ${className}`.trim();
   }
-  if (secondary) {
+ else if (secondary) {
     btnClass = `${css.btn__secondary} ${className}`.trim();
   }
-  if (transparent) {
+ else if (transparent) {
     btnClass = `${css.btn__transparent} ${className}`.trim();
   }
-  if (simple) {
+ else if (simple) {
     btnClass = `${css.btn__simple} ${className}`.trim();
   }
-  if(disable){
+ else if(disabled){
     btnClass = `${css.btn__disable} ${className}`.trim();
   }
 
   if (type && !to) {
     return (
-      <button type={type} className={btnClass} {...rest}>
+      <button type={type} className={btnClass} {...rest} >
         {children}
       </button>
     );
@@ -40,7 +40,7 @@ export default function Button({
 
   if (to && !type) {
     return (
-      <Link to={to} className={btnClass} {...rest}>
+      <Link to={to} className={btnClass} {...rest} >
         {children}
       </Link>
     );

@@ -1,0 +1,129 @@
+.radio__group {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.add__pet_input_male,
+.add__pet_input_female,
+.add__pet_input_multiple {
+  display: none;
+}
+
+.multiple {
+  fill: var(--color-accent);
+  transition: fill var(--transition);
+}
+
+.female {
+  stroke: #F43F5E;
+  transition: stroke var(--transition);
+}
+
+.male {
+  stroke: #54ADFF;
+  transition: stroke var(--transition);
+}
+
+.add__pet_label:nth-child(6) {
+  background: var(--color-background);
+  transition: background var(--transition)
+}
+
+.add__pet_label:nth-child(4) {
+  background: rgba(84, 173, 255, 0.1);
+  transition: background var(--transition)
+}
+
+.add__pet_label:nth-child(2) {
+  background: rgba(244, 63, 94, 0.1);
+  transition: background var(--transition)
+}
+
+.add__pet_label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: border var(--transition);
+}
+
+.add__pet_label:hover {
+  border: 1px solid var(--color-background-hover);
+  transition: border var(--transition);
+}
+
+.add__pet_input_female:checked~.add__pet_label:nth-child(2) {
+  background: #F43F5E;
+  transition: background var(--transition)
+}
+
+.add__pet_input_female:checked~.add__pet_label:nth-child(2) {
+  border: 1px solid transparent;
+}
+
+.add__pet_input_female:checked~.add__pet_label .female {
+  stroke: var(--color-secondary);
+  transition: stroke var(--transition);
+}
+
+.add__pet_input_male:checked~.add__pet_label:nth-child(4) {
+  background: #54ADFF;
+  transition: background var(--transition)
+}
+
+.add__pet_input_male:checked~.add__pet_label:nth-child(4) {
+  border: 1px solid transparent;
+}
+
+.add__pet_input_male:checked~.add__pet_label .male {
+  stroke: var(--color-secondary);
+  transition: stroke var(--transition);
+}
+
+.add__pet_input_multiple:checked~.add__pet_label:nth-child(6) {
+  background: var(--color-accent);
+  transition: background var(--transition)
+}
+
+.add__pet_input_multiple:checked~.add__pet_label:nth-child(6) {
+  border: 1px solid transparent;
+}
+
+.add__pet_input_multiple:checked~.add__pet_label .multiple {
+  fill: var(--color-secondary);
+  transition: fill var(--transition);
+}
+
+.input__error_msg {
+  position: absolute;
+  bottom: -11px;
+  left: 0;
+  font-size: 10px;
+  color: #EF2447;
+  transition: color var(--transition);
+}
+
+.filter__label{
+
+}
+.filter__input_Popular{
+  display: none;
+}
+
+@media screen and (min-width:768px) {
+  .input__error_msg {
+    bottom: -16px;
+    font-size: 14px;
+  }
+
+  .add__pet_label {
+    width: 40px;
+    height: 40px;
+  }
+}

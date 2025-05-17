@@ -1,0 +1,50 @@
+.login__form {
+    width: 100%;
+    max-width: 295px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login__btn {
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+.icons__content {
+    position: absolute;
+    top: 25%;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon {
+    stroke: #EF2447;
+}
+
+.icon__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: inherit;
+}
+
+@media screen and (min-width:768px) {
+    .login__form {
+        max-width: 100%;
+        gap: 16px;
+    }
+
+    .login__btn {
+        margin-top: 34px;
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .login__btn {
+        margin-top: 48px;
+    }
+}

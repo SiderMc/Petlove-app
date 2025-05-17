@@ -1,0 +1,84 @@
+.summary__info {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, min-content);
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    bottom: 32px;
+    left: 32px;
+    width: 294px;
+    padding: 16px 16px 18px 16px;
+    border-radius: 20px;
+    background-color: var(--color-secondary);
+}
+
+.summary__dec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    align-self: flex-start;
+    width: 60px;
+    height: 60px;
+    background: var(--color-background);
+    border-radius: 50%;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.summary__img {
+    width: 32px;
+    height: 32px;
+}
+
+.pet__name {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: -0.03em;
+    color: var(--color-text-accent);
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.pet__birthday {
+    display: flex;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: -0.02em;
+    color: var(--color-text-third);
+    justify-self: flex-end;
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+.pet__birthday_date {
+    margin-left: 4px;
+    color: var(--color-text-primary);
+}
+
+.pet__description {
+    text-wrap: pretty;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: -0.02em;
+    color: rgba(38, 38, 38, 0.8);
+    grid-column: 2/4;
+    grid-row: 2/3;
+}
+@media screen and (max-width:767px){
+    .summary__info{
+        display: none;
+    }
+} 
+@media screen and (min-width:1280px) {
+    .summary__info {
+        bottom: 97px;
+        left: 61px;
+    }
+    
+}

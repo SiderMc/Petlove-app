@@ -15,11 +15,12 @@ export default function useModal() {
     };
 
     const handleClickOutside = (e) => {
-      if (modalRef.current && !modalRef.current.contains(e.target)) {
+      if (isOpen&&modalRef.current && !modalRef.current.contains(e.target)) {
         handleCloseModal();
       }
     };
     const handleActiveLink = (e) => {
+      
       if (e.target.tagName === "A" || e.target.tagName === "BUTTON") {
         handleCloseModal();
       }
@@ -27,6 +28,7 @@ export default function useModal() {
 
     const handleClick = (e) => {
         if (isOpen) {
+          
             handleActiveLink(e);
             handleClickOutside(e);
           }

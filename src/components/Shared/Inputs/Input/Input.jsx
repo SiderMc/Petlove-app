@@ -12,13 +12,14 @@ export default function Input({
   id,
   type,
   errors,
+  field,
+  ref,
   ...rest
 }) {
   const uid = useId();
   const errorMessage = errors?.[name]?.message;
   let inputClass = '';
 
-  
   switch (true) {
     case valid:
       inputClass = css.input__valid;
@@ -39,12 +40,13 @@ export default function Input({
       inputClass = '';
   }
   return (
-    <label className={css.input__label}>
+    <label className={css.input__label} ref={ref}>
       <input
         type={type}
         className={inputClass}
         name={name}
         {...rest}
+        {...field}
         id={`${uid}-${id}`}
       />
       {children}

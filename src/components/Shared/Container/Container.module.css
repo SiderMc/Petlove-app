@@ -1,4 +1,4 @@
-.container {
+.container,.container__lg {
     max-width: 1440px;
     width: 100%;
     height: 100%;
@@ -8,7 +8,7 @@
 }
 
 @media screen and (min-width:768px) {
-    .container {
+    .container,.container__lg {
         padding-inline: 32px;
     }
 }

@@ -1,0 +1,43 @@
+.registration__form {
+    width: 100%;
+    max-width: 295px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.registration__btn {
+    margin-top: 14px;
+    text-transform: uppercase;
+}
+
+.icons__content {
+    position: absolute;
+    top: 25%;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon {
+    stroke: #EF2447;
+}
+
+.icon__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: inherit;
+}
+
+@media screen and (min-width:768px) {
+    .registration__form {
+        max-width: 100%;
+        gap: 16px;
+    }
+    .registration__btn {
+        margin-top: 16px;
+    }
+}

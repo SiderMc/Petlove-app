@@ -1,0 +1,30 @@
+.image__content{
+    position: relative;
+    max-width: 335px;
+    max-height: 280px;
+    display: flex;
+    justify-content: center;
+    background-color:inherit;
+
+}
+
+.section__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    justify-self: center;
+    object-fit: cover;
+    background-color:inherit;
+}
+
+@media screen and (min-width:768px) {
+    .image__content{
+        max-width: max-content;
+        max-height: max-content;
+    }
+    
+    .section__img {
+    border-radius: 60px;
+    }
+    
+}

@@ -1,0 +1,26 @@
+ label >.icon{
+    position: absolute;
+    top: 12px;
+    right: 12px;
+}
+
+.clear__btn{
+    position: absolute;
+    top: 12px;
+    right: 36px;
+    background: inherit;
+    border: none;
+}
+.icon{
+    stroke: var(--color-primary);
+}
+@media screen and (min-width:768px) {
+    label >.icon {
+        top: 15px;
+        right: 15px;
+    }
+    .clear__btn{
+        top: 15px;
+        right: 40px;
+    }
+}
