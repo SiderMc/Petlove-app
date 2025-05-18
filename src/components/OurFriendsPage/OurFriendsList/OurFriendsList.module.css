@@ -1,0 +1,24 @@
+.friend__list{
+    display: grid;
+   justify-content: center;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+@media screen  and (min-width:380px){
+.friend__list{
+    grid-template-columns: max-content;
+}
+}
+
+@media screen  and (min-width:768px){
+    .friend__list{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen  and (min-width:1280px){
+    .friend__list{
+        grid-template-columns: repeat(3,1fr);
+        column-gap: 20px;
+        row-gap: 28px;
+    }
+}

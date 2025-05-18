@@ -6,6 +6,7 @@ import RegistrationPage from '../pages/RegistrationPage/RegistrationPage';
 import LoginPage from '../pages/LoginPage/LoginPage';
 import AddPetPage from '../pages/AddPetPage/AddPetPage';
 import NoticesPage from '../pages/NoticesPage/NoticesPage';
+import OurFriendsPage from '../pages/OurFriendsPage/OurFriendsPage';
 
 export default function RoutesApp() {
   return (
@@ -16,6 +17,7 @@ export default function RoutesApp() {
       <Route path="/login" element={<LoginPage/>} />
       <Route path="/add-pet" element={<AddPetPage/>} />
       <Route path='/notice' element={<NoticesPage/>}/>
+      <Route path='/friends' element={<OurFriendsPage/>}/>
       <Route path="*" element={<NotFoundPage/>} />
       </Route>
     </Routes>

@@ -1,0 +1,124 @@
+.friends__card {
+    display: grid;
+    grid-template-columns:min-content 1fr 1fr 13px;
+    column-gap: 14px;
+    row-gap: 8px;
+    grid-template-rows: repeat(5,min-content);
+    background: var(--color-secondary);
+    border-radius: 15px;
+    padding: 12px 12px 40px 20px;
+    
+}
+
+.friends__card_worktime {
+    background: var(--color-background);
+    color: var(--color-text-accent);
+    padding: 8px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: -0.02em;
+    grid-column: 3/5;
+    grid-row: 1/2;
+    justify-self: flex-end;
+    margin-bottom:-8px ;
+    text-wrap: nowrap;
+}
+
+.friends__card_title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.25;
+    letter-spacing: -0.04em;
+    grid-column: 2/4;
+    grid-row: 2/3;
+    margin-bottom: 6px;
+}
+
+.friends__card_name {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 2px;
+    max-width: 196px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    color: var(--color-text-third);
+}
+.friends__card_img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    grid-column: 1/2;
+    grid-row: 2/6;
+}
+.friends__card_desc{
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var( --color-primary);
+    transition:color var(--transition);
+
+}
+.friends__card_name:nth-child(4){
+    grid-column: 2/4;
+    grid-row: 3/4;
+}
+.friends__card_name:nth-child(5){
+    grid-column: 2/4;
+    grid-row: 4/5;
+}
+.friends__card_name:nth-child(6){
+    grid-column: 2/4;
+    grid-row: 5/6;
+}
+
+@media screen  and (min-width:380px){
+    .friends__card_img{
+        width: 80px;
+        height: 80px;
+    }
+    .friends__card_name {
+        font-size: 14px;
+    }
+    .friends__card_title {
+        font-size: 16px;
+    }
+}
+@media screen  and (min-width:768px){
+    .friends__card {
+        grid-template-columns:min-content 1fr 1fr 13px;
+        column-gap: 16px;
+    }
+    .friends__card_title {
+        font-size: 20px;
+        line-height: 1.3;
+        margin-bottom: 6px;
+    }
+    .friends__card_worktime, .friends__card_name {
+        font-size: 14px;
+        line-height: 1.29;
+    }
+    .friends__card_img{
+        width: 90px;
+        height: 90px;
+    }
+    .friends__card_name {
+        max-width: clamp(12.25rem, -23.75rem + 53.333dvw, 18.75rem);
+    }
+}
+
+@media screen  and (min-width:1280px){
+    .friends__card {
+        column-gap: 20px;
+    }
+}
+
+.friends__card_desc:hover{
+    color: var(--color-text-accent);
+    transition:color var(--transition);
+}
